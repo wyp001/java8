@@ -1,0 +1,22 @@
+server:
+  servlet:
+  port: 18080
+  maxHttpHeaderSize : 3145728
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/db_java8?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+
+mybatis:
+  typeAliasesPackage: com.wyp.java8.model
+  mapper-locations: classpath:mappers/**/*.xml
+  configuration:
+     mapUnderscoreToCamelCase: true
+
+logging:
+  level:
+      com.wyp.java8.mapper: debug
